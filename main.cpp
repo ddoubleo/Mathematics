@@ -57,11 +57,17 @@ int main() {
         quancValue = correctValue(count1);
         count1 += 0.1;
     }
+    cout << "Values" << endl;
     cout << "QUANC8 " << "Spline " << "Lagrange " << endl;
     for (int i = 0; i < 10; ++i) {
         cout << quancValues[i] << " " << splineValues[i] << " " << lagrangeValues[i] << endl;
     }
-
+    cout << "Comparison" << endl;
+    cout << "QUANC8 " << "Spline Diff " << "Lagrange Diff" << endl;
+    for (int i = 0; i < 10; ++i) {
+        cout << quancValues[i] << " " << quancValues[i] - splineValues[i] << " " << quancValues[i] - lagrangeValues[i]
+             << endl;
+    }
 
 }
 
